@@ -1,22 +1,28 @@
-fetch('https://example.com/api/submit', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      name: 'Shan',
-      email: 'shan@example.com'
+function submitUser () {
+    fetch('https://example.com/api/submit', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: 'Shan',
+            email: 'shan@example.com' 
+        })        
     })
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .catch(error => {
-    console.error('There was a problem with the fetch operation:', error);
-  });
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('User submitted successfully:', data);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
 
 //------------------------------------------------------
 
