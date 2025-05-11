@@ -106,3 +106,26 @@ img.src = data.message
 9. it allows you to access parts of the HTML through their id's to insert the data from the API
 
 10. Refer to 1dog.api.js
+
+------------------------------------------------------
+
+Quiz Five Answer Key:
+
+1. b
+2. b
+3. b
+4. b
+5. a
+
+6. Using async/await gives the advantage of cleaner and easier to read code. As well as making it easier to debug as you can go step by step.
+
+7. the response.ok checks it the response status code is anywhere from 200 - 299 you can use this when checking for errors like 
+if (!response.ok) {
+    console.log(error, "something is wrong")
+}
+
+8. it does not await for the data to be sucessfully retrieved or sent before proceeding with the rest of the function which will cause an error.
+
+9. I would use try... catch and in the catch i would log the error and status code
+
+10. It will return a Promise immediately, and the function continues execution without waiting for the Promise to resolve. However, it could cause issues in your logic if you are depending on the resolved data. To avoid that, await should be used with promises to pause the function until the promise is resolved.
