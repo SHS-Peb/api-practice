@@ -129,3 +129,13 @@ if (!response.ok) {
 9. I would use try... catch and in the catch i would log the error and status code
 
 10. It will return a Promise immediately, and the function continues execution without waiting for the Promise to resolve. However, it could cause issues in your logic if you are depending on the resolved data. To avoid that, await should be used with promises to pause the function until the promise is resolved.
+
+------------------------------------------------------
+
+Quiz Six Answer Key:
+
+1. b
+2. b
+3. c
+4. b
+5. c
